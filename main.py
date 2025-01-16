@@ -31,7 +31,7 @@ def main():
     window = sg.Window("wallpaper Downloader", layout=layout)
     try:
         with open("filepath.txt", "r") as file:
-         images_path = file.read()
+            images_path = file.read()
     except FileNotFoundError:
         while True:
             event, values = window.read()
@@ -45,9 +45,15 @@ def main():
                     if values['check']:
                         make_shortcut()
                     break
+    try:
 
-    with open(images_path+image_name,"wb") as file:
-        file.write(image_bits.content)
+        with open(images_path + image_name, "rb") as file:
+            file.read()
+        print("was there")
+    except FileNotFoundError:
+        print("wasn't there")
+        with open(images_path+image_name,"wb") as file:
+            file.write(image_bits.content)
     window.close()
 
 def make_shortcut():
