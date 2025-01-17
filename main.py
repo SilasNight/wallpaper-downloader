@@ -23,10 +23,12 @@ def main():
     explain = sg.Text("Choose the filepath where you want to download the NASA daily images to.")
     filepath_input = sg.Input("Filepath Here",key= "Path")
     check_box = sg.Checkbox("Would you like this to automatically run on startup?",key="check")
+    button_choose_filepath = sg.FileBrowse("Choose",key="file")
     button = sg.Button("DONE",key="Done")
     layout = [[explain],
               [check_box],
-              [filepath_input,button]]
+              [filepath_input,button_choose_filepath],
+              [button]]
 
     window = sg.Window("wallpaper Downloader", layout=layout)
     try:
@@ -45,6 +47,11 @@ def main():
                     if values['check']:
                         make_shortcut()
                     break
+                case "file":
+                    images_path = values["file"]
+                    window['Path'].update(images_path)
+                case sg.WIN_CLOSED:
+                    window.close()
     try:
 
         with open(images_path + image_name, "rb") as file:
