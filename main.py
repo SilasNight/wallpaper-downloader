@@ -23,7 +23,7 @@ def main():
     explain = sg.Text("Choose the filepath where you want to download the NASA daily images to.")
     filepath_input = sg.Input("Filepath Here",key= "Path")
     check_box = sg.Checkbox("Would you like this to automatically run on startup?",key="check")
-    button_choose_filepath = sg.FileBrowse("Choose",key="file")
+    button_choose_filepath = sg.FolderBrowse("Choose",key="file")
     button = sg.Button("DONE",key="Done")
     layout = [[explain],
               [check_box],
