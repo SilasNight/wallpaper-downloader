@@ -13,7 +13,7 @@ make sure you have git installed on your computer as well<br>
 https://git-scm.com/install/
 
 Now navigate to you the folder you want to use with<br>
-cd <your filepath>
+cd (your filepath)
 
 Get the project<br>
 git clone https://github.com/SilasNight/wallpaper-downloader
