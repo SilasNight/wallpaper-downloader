@@ -5,7 +5,7 @@ This is a small application that is used to download the daily "image of the day
 You can use my api. But if you are going to be using this with the automatic download 
 I am going to ask that you make your own account on the NASA website and use your api instead
 
-### Installation
+### Installation 
 ___
 
 You need to decide where you want this code to be downloaded to
