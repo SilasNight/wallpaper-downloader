@@ -32,7 +32,7 @@ py main.py
 ___
 
 ### Making independant executable
-I would love to give advice on this but I haven't gotten it to work properly as of yet
+I would love to give advice on this but I haven't found a way to make it work without the temp file issue
 ___
 
 ### Contributor
